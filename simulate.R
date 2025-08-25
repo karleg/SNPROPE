@@ -30,7 +30,7 @@ for (sim.itr in 1:10)
   rownames(alleles.controls)=paste0('site-',1:nrow(alleles.controls))
   
   res=snp(alleles.controls = alleles.controls,alleles.cases = alleles.cases,num.alleles = num.alleles,
-          mcmc.warmup = 10000,mcmc.iter = 100000,allele.level = F,n.cores = 20)
+          mcmc.warmup = 20000,mcmc.iter = 200000,allele.level = F,n.cores = 20)
   
   res=res[order(as.numeric(res[,'P'])),]
   
